@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.wearable.view.WatchViewStub;
 import android.widget.TextView;
 
+import com.kogitune.rx_wear_http.WearHttpObservable;
+
 public class MainActivity extends Activity {
 
     private TextView mTextView;
@@ -20,5 +22,7 @@ public class MainActivity extends Activity {
                 mTextView = (TextView) stub.findViewById(R.id.text);
             }
         });
+
+        WearHttpObservable.fetchText(this,"http://ip.jsontest.com/");
     }
 }

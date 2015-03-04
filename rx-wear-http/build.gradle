@@ -1,11 +1,10 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 21
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        applicationId "com.kogitune.rx_wear_http"
         minSdkVersion 14
         targetSdkVersion 21
         versionCode 1
@@ -23,7 +22,6 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:21.0.3'
 
-    compile 'com.google.android.gms:play-services-wearable:+'
     compile 'io.reactivex:rxandroid:0.24.0'
     compile 'com.kogitune:wear-http:0.0.5'
 }
